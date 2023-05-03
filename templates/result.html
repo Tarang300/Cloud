@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Results</title>
+    <style>
+        body {
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 48px;
+            margin-top: 50px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .treatment-image {
+            width: 220px;
+            height: 200px;
+            margin: 30px;
+        }
+
+        .treatment-text {
+            margin-top: 20px;
+            color: white;
+            font-family: Garamond;
+            font-size: 25px;
+        }
+        .goodbye-text {
+        font-size: 66px;
+        text-align: center;
+        padding: 20px;
+        margin-top: 10px;
+        color: white;
+        font-family: Garamond;
+    }
+    .text{
+        color: white;
+        font-family: 'Times New Roman', Times, serif
+    }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="text">
+        <h1>Treatment Required</h1>
+        </div>
+        <div class="treatment-text">
+            <p>{{ prediction_text }}</p>
+        </div>
+
+        <img src="{{url_for('static',filename = 'Mental.jpg')}}" alt="Treatment Image" class="treatment-image">
+    </div>
+    <div class="goodbye-text">
+        Have a nice day!
+    </div>
+</body>
+</html>

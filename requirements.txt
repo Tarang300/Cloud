@@ -1,0 +1,11 @@
+flask
+numpy
+pandas
+sklearn
+xgboost
+lightgbm
+seaborn
+matplotlib
+missingno
+warnings
+kmodes

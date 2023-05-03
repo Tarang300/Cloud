@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mental Health In Tech Industry Data Form</title>
+    <style>
+        body{
+            background-color: #1c1b1b;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        input[type="submit"] {
+            background-color: #000000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/predict" method="post">
+
+
+        <label for="Gender">Gender:</label>
+        <select id="Gender" name="Gender">
+            <option value="">Select Option...</option>
+            <option value="0">Female</option>
+            <option value="1">Male</option>
+            <option value="2">Other</option>
+        </select>
+
+        <label for="self_employed">Are you self-employed?</label>
+        <select id="self_employed" name="self_employed">
+            <option value="">Select Option...</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="family_history">Does your family have a history of mental illness?</label>
+        <select id="family_history" name="family_history">
+            <option value="">Select Option...</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <!-- <label for="treatment">Have you sought treatment for a mental health condition?</label>
+        <select id="treatment" name="treatment">
+            <option value="">Select Option...</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select> -->
+
+        <label for="work_interfere">If you have a mental health condition, do you feel that it interferes with your
+            work?</label>
+        <select id="work_interfere" name="work_interfere">
+            <option value="">Select Option...</option>
+            <option value="0">Never</option>
+            <option value="1">Often</option>
+            <option value="2">Rarely</option>
+            <option value="3">Sometimes</option>
+        </select>
+
+        <label for="no_employees">How many employees does your company or organization have?</label>
+        <select id="no_employees" name="no_employees">
+            <option value="">Select Option...</option>
+            <option value="0">1-5</option>
+            <option value="1">100-500</option>
+            <option value="2">26-100</option>
+            <option value="3">500-1000</option>
+            <option value="4">6-25</option>
+            <option value="5">More than 1000</option>
+        </select>
+
+        <label for="remote_work">Do you work remotely (outside of an office) at least 50% of the time?</label>
+        <select id="remote_work" name="remote_work">
+            <option value="">Select Option...</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="tech_company">Is your employer primarily a tech company/organization?</label>
+        <select id="tech_company" name="tech_company">
+            <option value="">Select Option...</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="benefits">Does your employer provide mental health benefits?</label>
+        <select id="benefits" name="benefits">
+            <option value="">Select Option...</option>
+            <option value="0">Don't know</option>
+            <option value="1">No</option>
+            <option value="2">Yes</option>
+        </select>
+
+        <!-- Care Options -->
+        <label for="care_options">Do you know the options for mental health care your employer provides?</label>
+        <select id="care_options" name="care_options">
+            <option value="">Select Option...</option>
+            <option value="0">No</option>
+            <option value="1">Not sure</option>
+            <option value="2">Yes</option>
+        </select>
+
+        <!-- Wellness Program -->
+        <label for="wellness_program"> Has your employer ever discussed mental health as part of an employee wellness program?</label>
+        <select id="wellness_program" name="wellness_program">
+            <option value="">Select Option...</option>
+            <option value="0">Don't know</option>
+            <option value="1">No</option>
+            <option value="2">Yes</option>
+        </select>
+
+        <!-- Seek Help -->
+        <label for="seek_help"> Does your employer provide resources to learn more about mental health issues and how to seek help?</label>
+        <select id="seek_help" name="seek_help">
+            <option value="">Select Option...</option>
+            <option value="0">Don't know</option>
+            <option value="1">No</option>
+            <option value="2">Yes</option>
+        </select>
+
+        <label for="anonymity">Is your anonymity protected if you choose to take advantage of mental health or substance
+            abuse treatment resources?</label>
+        <select id="anonymity" name="anonymity">
+            <option value="">Select Option...</option>
+            <option value="0">Don't know</option>
+            <option value="1">No</option>
+            <option value="2">Yes</option>
+        </select>
+
+        <label for="leave">How easy is it for you to take medical leave for a mental health condition?</label>
+        <select id="leave" name="leave">
+            <option value="">Select Option...</option>
+            <option value="0">Don't know</option>
+            <option value="1">Somewhat difficult</option>
+            <option value="2">Somewhat easy</option>
+            <option value="3">Very difficult</option>
+            <option value="4">Very easy</option>
+        </select>
+
+        <label for="mental_health_consequence">Do you think that discussing a mental health issue with your employer
+            would have negative consequences?</label>
+        <select id="mental_health_consequence" name="mental_health_consequence">
+            <option value="">Select Option...</option>
+            <option value="0">Maybe</option>
+            <option value="1">No</option>
+            <option value="2">Yes</option>
+        </select>
+
+        <label for="phys_health_consequence">Do you think that discussing a physical health issue with your employer
+            would have negative consequences?</label>
+        <select id="phys_health_consequence" name="phys_health_consequence">
+            <option value="">Select Option...</option>
+            <option value="0">Maybe</option>
+            <option value="1">No</option>
+            <option value="2">Yes</option>
+        </select>
+
+        <label for="coworkers">Would you be willing to discuss a mental health issue with your coworkers?</label>
+        <select id="coworkers" name="coworkers">
+            <option value="">Select Option...</option>
+            <option value="0">No</option>
+            <option value="1">Some of them</option>
+            <option value="2">Yes</option>
+        </select>
+
+        <label for="supervisor">Would you be willing to discuss a mental health issue with your direct
+            supervisor(s)?</label>
+        <select id="supervisor" name="supervisor">
+            <option value="">Select Option...</option>
+            <option value="0">No</option>
+            <option value="1">Some of them</option>
+            <option value="2">Yes</option>
+        </select>
+
+        <label for="mental_health_interview">Have you ever had a mental health disorder?</label>
+        <select id="mental_health_interview" name="mental_health_interview">
+            <option value="">Select Option...</option>
+            <option value="0">Maybe</option>
+            <option value="1">No</option>
+            <option value="2">Yes</option>
+        </select>
+
+        <label for="phys_health_interview">Have you ever had a physical health disorder?</label>
+        <select id="phys_health_interview" name="phys_health_interview">
+            <option value="">Select Option...</option>
+            <option value="0">Maybe</option>
+            <option value="1">No</option>
+            <option value="2">Yes</option>
+        </select>
+
+        <label for="mental_vs_physical">Do you feel that your employer takes physical health as seriously as they do
+            mental health?</label>
+        <select id="mental_vs_physical" name="mental_vs_physical">
+            <option value="">Select Option...</option>
+            <option value="0">Don't know</option>
+            <option value="1">No</option>
+            <option value="2">Yes</option>
+        </select>
+
+        <label for="obs_consequence">Have you heard of or observed negative consequences for coworkers with mental
+            health conditions in your workplace?</label>
+        <select id="obs_consequence" name="obs_consequence">
+            <option value="">Select Option...</option>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label for="age_bin">Enter your age bin</label>
+        <select id="age_bin" name="age_bin">
+            <option value="">Select Option...</option>
+            <option value="0">0-20</option>
+            <option value="1">20-30</option>
+            <option value="2">30-35</option>
+            <option value="3">35-40</option>
+            <option value="4">40-45</option>
+            <option value="5">45-50</option>
+            <option value="6">50-55</option>
+            <option value="7">55-60</option>
+        </select>
+
+
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <br>
+    {{ prediction_text }}
+</body>
+
+</html>
