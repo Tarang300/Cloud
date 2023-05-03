@@ -1,11 +1,10 @@
-flask
-numpy
-pandas
-sklearn
-xgboost
-lightgbm
-seaborn
-matplotlib
-missingno
-warnings
-kmodes
+flask == 2.2.3
+numpy == 1.23.5
+pandas ==2.0.0
+sklearn==0.0.post1
+xgboost==1.7.5
+lightgbm==3.3.5
+seaborn==0.12.2
+matplotlib==3.7.1
+missingno==0.5.2
+kmodes==0.12.2
